@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f0f2f7;
+	font-family: "Kanit", sans-serif;
+
+}
+h2{
+	margin-bottom: 12px;
+	font-weight: 600;
+	font-size: 24px;
+}
+
+.container{
+	max-width: 500px;
+	width: 100%;
+	margin: 0 2rem;
+	padding: 1rem;
+	border-radius: 8px;
+	background-color: #fff;
+}
+
+input{
+	width: 100%;
+	height: 50px;
+	padding: 0 16px 0 16px;
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+input[type="text"]:focus{
+	outline: none;
+}
+
+.btn{
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.btn button{
+	padding: 14px;
+	font-size: 14px;
+	width: 100%;
+	border: none;
+	border-radius: 4px;
+	transition: transform 0.3s ease;
+	cursor: pointer;
+}
+.btn button:active{
+	transform: scale(0.96);
+}
+.btn button:hover{
+	filter: brightness(0.9);
+}
+
+.btn button:nth-child(1){
+	background-color: rgb(19, 153, 43);
+	color: #fff;
+}
+.btn button:nth-child(2){
+	background-color: rgb(55, 128, 205);
+	color: #fff;
+	position: relative;
+}
+
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>สุ่มรหัสสินค้า</title>
+	<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+	
+	<div class="container">
+		<h2>Generate SKU</h2>
+		<div class="box">
+			<input type="text" id="genSku" placeholder="Create SKU" readonly>
+		</div>
+		<div class="btn">
+			<button onclick="genSku()">Generate SKU</button>
+			<button onclick="copySku()" class="btn-copy">Copy</button>
+		</div>
+	</div>
+	
+	<script>
+		let genSkuValue = document.getElementById('genSku')
+
+		function genSku(){
+			let number = "1234567890"
+			let skuLength = 10;
+			let skucode = "";
+
+			for(let i = 0; i < skuLength; i++){
+				let randomSku = Math.floor(Math.random() * number.length)
+				skucode += number.substring(randomSku, randomSku + 1)
+			}
+			genSkuValue.value = `724${skucode}`;
+		}
+		
+		function copySku(){
+			genSkuValue.setSelectionRange(0,999);
+			document.execCommand("copy");
+			genSkuValue.select();
+		
+		}
+		
+	</script>
+</body>
+</html>
